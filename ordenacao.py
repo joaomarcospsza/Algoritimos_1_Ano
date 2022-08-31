@@ -41,7 +41,7 @@ for i in range(0, len(v)-1):
     c = v[i]
     v[i] = menor
     v[pmenor] = c
-    print(v)"""
+    print(v)
 
 #INSERÇÃO
 [10, 30, 5, 2, 15, 8]
@@ -61,11 +61,43 @@ for i in range(1, len(v)):
         j -= 1
     v[j+1] = valor
     print(v)
-        
 
+#busca sequencial/linear
+v = [10, 30, 15, 8, 5, 2]
 
+ivalor = -1
+valor = int(input("Informe um valor para ser buscado: "))
 
+for i in range(0, len(v)):
+    if(v[i] == valor):
+        ivalor = i
+        break
 
+if(valor >=0 ):
+    print("Valor encontrado na posição", ivalor)
+else:
+    print("Valor não encontrado")
+"""
 
+#busca por BINARIO - precisa estar ordenado
+v = [2,5,8,10,15,30]
 
+ivalor = -1
+valor = int(input("Valor: "))
+i = 0
+f = len(v)-1
+while(i <= f):
+    m = int((i+f)/2)
+    if(v[m] == valor):
+        ivalor=m
+        break
+    elif(valor > v[m]):
+        i = m+1
+    else:
+        f = m-1
+
+if(ivalor >= 0):
+    print("Achou misera")
+else:
+    print("Achou não")
 
