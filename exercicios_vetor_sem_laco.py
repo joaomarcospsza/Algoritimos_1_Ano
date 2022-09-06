@@ -28,6 +28,6 @@ vetor = [valor1, valor2,  valor3, valor4, valor5]
 print(vetor)
 
 # b) Apresente na tela o dobro de todos os valores do vetor.
-dobro = len(vetor)
+
 
 # c) Apresente na tela a metade de todos os valores do vetor.
