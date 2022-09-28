@@ -1,4 +1,8 @@
-def fatorial(num):
+
+import random
+import sys
+from tkinter import N
+"""def fatorial(num):
     global x #mostra que esta e uma variavel global
     fat = 1 
     i = 2
@@ -9,7 +13,7 @@ def fatorial(num):
 
 x = int(input("Informe um número: "))
 
-x1 = fatorial(x)
+x1 = fatorial(x)"""
 
 """def fatorial2(fat):
     resultado = 1
@@ -24,6 +28,19 @@ Variavel Local: apenas vista dentro do subalgoritimo
 
 Procedimento: não tem 'return', pq não tem valor
 Função: Tem 'return', pq tem valor
-
-
 """
+
+
+val = [] * 10
+menor = sys.maxsize
+
+for i in range(0, len(val)):
+    val[i] = random.randint(1, 100)
+    
+def menor_valor(val):
+
+    if(val[i] < menor):
+        menor = val[i]
+    return menor
+
+menor_valor(menor)
