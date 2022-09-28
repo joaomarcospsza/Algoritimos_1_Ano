@@ -14,23 +14,20 @@ Faça um procedimento chamada encontrarMenor() que recebe um vetor de números i
 3º - Crie no programa principal um vetor e preencha com números. Em seguida, utilize as três funções criadas no exercício anterior.
 """
 
-
-
-
-from audioop import mul
+import math
 
 
 def somar(a, b):
     somar = n1 + n2
     print("A soma dos números {}, {}  fica: {}".format(a, b, somar))
 
-def multiplicar(a, b):
+def multiplicar(x, y):
     resultado =  n1 * n2
-    print("A multiplicação dos números {} x {} fica: {}".format(a, b, resultado))
+    print("A multiplicação dos números {} x {} fica: {}".format(x, y, resultado))
 
-def calcularRaiz():
-    print()
-
+def calcularRaiz(d):
+    raiz = math.sqrt(n1)
+    print("A multiplicação dos números {} x {} fica: {}".format(d, raiz))
 
 def calcularPotencia():
     print()
@@ -38,9 +35,41 @@ def calcularPotencia():
 def calcularTabuada():
     print()
 
+opcao = 0
+while(opcao != 6):
+    print(" \n == == == Menu Principal == == == \n 1. Somar \n 2. Multiplicar \n 3. Calcular Raiz \n 4. Calcular Potencia \n 5. Calcular Tabuada \n 6. Sair")
 
-n1 = int(input("Informe o valor no primeiro numero: "))
-n2 = int(input("Informe o valor no segundo numero: "))
+    opcao = input("Informe a opção: ")
 
-somar(n1, n2)
-multiplicar(n1, n2)
+    if(opcao == 1):
+        n1 =  int(input("Informe o valor do primeiro número: "))
+        n2 = int(input("Informe o valor do segundo número: "))
+        somar(n1, n2)
+
+    elif(opcao == 2):
+        n1 = int(input("Informe o valor do primeiro número: "))
+        n2 = int(input("Informe o valor do segundo número: "))
+        multiplicar(n1, n2)
+    
+    elif(opcao == 3):
+        n1 = int(input("Informe o valor do primeiro número: "))
+        somar(n1)
+    
+    elif(opcao == 4):
+        n1 = int(input("Informe o valor do primeiro número: "))
+        n2 = int(input("Informe o valor do segundo número: "))
+        somar(n1, n2)
+
+    elif(opcao == 5):
+        n1 = int(input("Informe o valor do primeiro número: "))
+        n2 = int(input("Informe o valor do segundo número: "))
+        somar(n1, n2)
+    
+    elif(opcao == 6):
+        break
+    else:
+        print("Valor invalido.")
+
+    
+
+
