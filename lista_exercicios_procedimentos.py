@@ -8,6 +8,7 @@ Faça um procedimento que calcule a tabuada de 1 a 10 para um número chamado ca
 
 import math
 import random
+import sys
 """
 def somar(a, b):
     somar = n1 + n2
@@ -72,28 +73,37 @@ while(opc != 6):
         print("Número Informado é invalido;")
 """
 
-def ImprimirVetor(a):
-    for i in range(0, tam):
-        vet = random.randint(0, 100)
+def imprimirVetor(a):
+    for i in range(1, a+1):
+        vet = random.randint(1, 100)
         print("{}º - {}".format(i, vet))
 
-def Acharmenor(b):
-    print
-def AcharMenor():
+def acharmenor(b):
+    maior = -sys.maxsize
+    for i in range(1, b+1):
+        vet = random.randint(1, 150)
+        if(vet[i] > maior):
+            maior = vet[i]
+        print("O maior número é {} estando na posição {}º".format(maior, i))
+def acharmaior():
     print()
+
 opc = 0
 while(opc != 4):
     print(" \n == == == Menu Principal == == == \n 1. Imprimir Vetor \n 2. Achar Maior \n 3. Achar Menor \n 4. Sair")
     opc = int(input("Informe a opção: "))
 
     if(opc == 1):
+        print("Submenu 'Imprimir Vetor'.")
         tam = int(input("Informe o  tamanho do vetor: "))
         vet = [] * tam
-        ImprimirVetor(tam)
+        imprimirVetor(tam)
         
     elif(opc == 2):
         print("Submenu 'Imprimir Vetor'.")
-        tam = int(input("Informe o tamanho do vetor"))
+        tam = int(input("Informe o tamanho do vetor: "))
+        veto = [] * tam
+        acharmenor(tam)
         
     elif(opc == 3):
        print
