@@ -7,8 +7,9 @@ Faça um procedimento que calcule a tabuada de 1 a 10 para um número chamado ca
 """
 
 import math
-
-"""def somar(a, b):
+import random
+"""
+def somar(a, b):
     somar = n1 + n2
     print("A soma dos números {} + {}  fica: {}".format(a, b, somar))
 
@@ -70,10 +71,12 @@ while(opc != 6):
     else:
         print("Número Informado é invalido;")
 """
+
 def ImprimirVetor(a):
-    for i in range(0, a):
-        vet = int(input("Informe um número: "))
-        print(vet)
+    for i in range(0, tam):
+        vet = random.randint(0, 100)
+        print("{}º - {}".format(i, vet))
+
 def Acharmenor(b):
     print
 def AcharMenor():
@@ -84,10 +87,9 @@ while(opc != 4):
     opc = int(input("Informe a opção: "))
 
     if(opc == 1):
-        print("Submenu 'Imprimir Vetor'.")
-        tam = int(input("Informe o Tamanho do Vetor: "))
+        tam = int(input("Informe o  tamanho do vetor: "))
         vet = [] * tam
-        ImprimirVetor(vet)
+        ImprimirVetor(tam)
         
     elif(opc == 2):
         print("Submenu 'Imprimir Vetor'.")
