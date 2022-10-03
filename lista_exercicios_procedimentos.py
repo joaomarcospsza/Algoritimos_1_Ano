@@ -74,8 +74,8 @@ def ImprimirVetor(a):
     for i in range(0, a):
         vet = int(input("Informe um número: "))
         print(vet)
-def Acharmenor():
-    print()
+def Acharmenor(b):
+    print
 def AcharMenor():
     print()
 opc = 0
@@ -87,10 +87,12 @@ while(opc != 4):
         print("Submenu 'Imprimir Vetor'.")
         tam = int(input("Informe o Tamanho do Vetor: "))
         vet = [] * tam
-        ImprimirVetor(tam)
+        ImprimirVetor(vet)
         
     elif(opc == 2):
-        print
+        print("Submenu 'Imprimir Vetor'.")
+        tam = int(input("Informe o tamanho do vetor"))
+        
     elif(opc == 3):
        print
     elif(opc == 4):
