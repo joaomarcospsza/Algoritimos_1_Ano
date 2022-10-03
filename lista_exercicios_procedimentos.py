@@ -1,8 +1,14 @@
+"""Crie procedimentos com parâmetros informados pelo usuário no programa principal:
+Faça uma procedimento que soma dois números. Deve ser utilizado um procedimento chamado somar(), que deve receber os números a serem somados, somar os números e apresentar o resultado na tela.
+Faça um procedimento que multiplica dois números. Deve ser utilizado um procedimento chamado multiplicar(), que deve receber os números e realizar a operação de multiplicação, apresentando o resultado na tela.
+Faça um procedimento que calcule a raiz quadrada de um número chamado calcularRaiz(). O procedimento deve receber o número por parâmetro, efetuar o cálculo e apresentar o resultado.
+Faça um procedimento que calcule a potência de um número (XY) chamado calcularPotencia(). O procedimento deve receber os números por parâmetro, efetuar o cálculo e apresentar o resultado.
+Faça um procedimento que calcule a tabuada de 1 a 10 para um número chamado calcularTabuada(). O procedimento deve receber o número por parâmetro, efetuar o cálculo e apresentar o resultado.
+"""
 
 import math
 
-
-def somar(a, b):
+"""def somar(a, b):
     somar = n1 + n2
     print("A soma dos números {} + {}  fica: {}".format(a, b, somar))
 
@@ -24,7 +30,6 @@ def calcularTabuada(g):
         tabuada = numero * i
         print("{} X {} = {}".format(g, i, tabuada))
 
-
 opc = 0
 while(opc != 6):
     print(" \n == == == Menu Principal == == == \n 1. Somar \n 2. Multiplicar \n 3. Calcular Raiz \n 4. Calcular Potencia \n 5. Calcular Tabuada \n 6. Sair")
@@ -32,30 +37,30 @@ while(opc != 6):
     opc = int(input("Informe a opção: "))
 
     if(opc == 1):
-        print("Você entrou em 'Somar...'")
+        print("Submenu 'Somar'")
         n1 =  int(input("Informe o valor do primeiro número para soma: "))
         n2 = int(input("Informe o valor do segundo número par asoma: "))
         somar(n1, n2)
 
     elif(opc == 2):
-        print("Você entrou em 'Multiplicação...'")
+        print("Submenu 'Multiplicação'")
         n1 = int(input("Informe o primeiro número para multiplicação: "))
         n2 = int(input("Informe o segundo número para multiplicação: "))
         multiplicar(n1, n2)
     
     elif(opc == 3):
-        print("Você entrou em 'Calcular Raiz...'")
+        print("Submenu 'Calcular Raiz'")
         n1 = int(input("Informe o valor: "))
         calcularRaiz(n1)
     
     elif(opc == 4):
-        print("Você entrou em 'Calcular Potência...'")
+        print("Submenu 'Calcular Potência'")
         b = int(input("Informe o valor da Base: "))
         p = int(input("Informe o valor do expoente: "))
         calcularPotencia(b, p)
 
     elif(opc == 5):
-        print("Você entrou em 'Calcular Tabuada...'")
+        print("Submenu 'Calcular Tabuada'")
         numero = int(input("Informe o número da tabuada: "))
         calcularTabuada(numero)
     
@@ -64,7 +69,33 @@ while(opc != 6):
         break
     else:
         print("Número Informado é invalido;")
+"""
+def ImprimirVetor(a):
+    for i in range(0, a):
+        vet = int(input("Informe um número: "))
+        print(vet)
+def Acharmenor():
+    print()
+def AcharMenor():
+    print()
+opc = 0
+while(opc != 4):
+    print(" \n == == == Menu Principal == == == \n 1. Imprimir Vetor \n 2. Achar Maior \n 3. Achar Menor \n 4. Sair")
+    opc = int(input("Informe a opção: "))
 
-    
-
+    if(opc == 1):
+        print("Submenu 'Imprimir Vetor'.")
+        tam = int(input("Informe o Tamanho do Vetor: "))
+        vet = [] * tam
+        ImprimirVetor(tam)
+        
+    elif(opc == 2):
+        print
+    elif(opc == 3):
+       print
+    elif(opc == 4):
+        print("Finalizando o programa...")
+        break
+    else:
+        print("Número Informado é invalido;")
 
