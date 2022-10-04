@@ -82,11 +82,18 @@ def acharmenor(b):
     maior = -sys.maxsize
     for i in range(1, b+1):
         vet = random.randint(1, 150)
-        if(vet[i] > maior):
-            maior = vet[i]
-        print("O maior número é {} estando na posição {}º".format(maior, i))
-def acharmaior():
-    print()
+        if(vet > maior):
+            maior = vet
+    print("Maior número: {}".format(maior))
+
+def acharmaior(c):
+    menor = sys.maxsize+1
+    for i in range(1, c+1):
+        vet = random.randint(1, 200)
+        if(vet < menor):
+            menor = vet
+    print("Menor número: {}".format(menor))
+
 
 opc = 0
 while(opc != 4):
@@ -100,13 +107,17 @@ while(opc != 4):
         imprimirVetor(tam)
         
     elif(opc == 2):
-        print("Submenu 'Imprimir Vetor'.")
-        tam = int(input("Informe o tamanho do vetor: "))
-        veto = [] * tam
+        print("Submenu 'Achar Menor'.")
+        tam = int(input("Tamanho do Vetor: "))
+        ve = [] * tam
         acharmenor(tam)
         
     elif(opc == 3):
-       print
+        print("Submenu 'Achar Maior'.")
+        tam = int(input("Informe qual será o tamanho do vetor: "))
+        v = [] * tam
+        acharmaior(tam)
+       
     elif(opc == 4):
         print("Finalizando o programa...")
         break
