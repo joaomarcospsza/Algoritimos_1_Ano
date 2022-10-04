@@ -123,4 +123,3 @@ while(opc != 4):
         break
     else:
         print("Número Informado é invalido;")
-
