@@ -59,14 +59,15 @@ soma = somaImpares(vetor)
 print("a soma é:", soma)
 
 def busca(num, vetor):
-    x = False
     for i in range(0, len(vetor)):
         if(num == vetor[i]):
-            x = True
-    if(x == True):
+            return 
+    print("O valor não está no vetor.")
+
+    """if(x == True):
         print("Número encontrado!")
     else:
-        print("O número não está no vetor.")
+        print("O número não está no vetor.")"""
 
 
 vetor = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
