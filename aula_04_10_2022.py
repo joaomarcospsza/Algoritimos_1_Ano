@@ -4,17 +4,21 @@
 o tamanho de um vetor. A função deve criar o vetor, preencher com valores aleatórios
 entre 1 e 200 e retornar o vetor. No algoritmo principal, solicite o tamanho
 do vetor para o usuário e crie o vetor utilizando a função."""
+
 # PARTE 2
 """Crie um procedimento chamado exibirVetor para exiba na tela o vetor recebido por parâmetro."""
+
 # PARTE 3
 """Crie uma função chamada somaImpares que calcule e retorne a soma de todos os números
 ímpares de um vetor recebido por parâmetro. No algoritmo principal, apresente a soma na tela."""
+
 # PARTE 4
 """Implemente um procedimento chamado busca que recebe por parâmetro um número
 informado pelo usuário. O procedimento deve, usando a busca sequencial, exibir
 uma mensagem na tela dizendo se o número está ou não presente em um vetor
 também recebido por parâmetro.
 """
+
 # PARTE 5
 """Implemente uma função chamada ordenar que recebe dois parâmetros: um vetor de números inteiros e o nome de um algoritmo de ordenação(bolha, inserção ou seleção).
 Ordene e retorne o vetor recebido de acordo com o parâmetro de ordenação.
@@ -28,6 +32,7 @@ def criarVetor(tam):
 
     return vetor
 
+
 tam = int(input("digite o tamanho do vetor: "))
 vetor = criarVetor(tam)
 print(vetor)
@@ -35,7 +40,8 @@ print(vetor)
 
 def exibirVetor(vetor):
     for i in range(0, len(vetor)):
-       print(vetor[i])
+       print(vetor[i], end = "")
+    print(" ")
 
 vetor = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 exibirVetor(vetor)
