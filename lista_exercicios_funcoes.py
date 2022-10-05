@@ -1,6 +1,7 @@
 import random
 import lista_exercicios_funcoes_principal 
 
+#1
 def pedirNumero(a):
     while(a < 0):
         print("Número invalido")
@@ -9,48 +10,61 @@ def pedirNumero(a):
         print("Número valido")
         return a
 
-
+#2
 def numeroAle(b):
-    numAle = random.randint(1, pedirNumero())
-
+    numAle = random.randint(1, b())
     return numAle
 
-def retornarMes():
-    if(pedirNumero() == 1):
+#3
+def retornarMes(c):
+    if(c == 1):
         return "Janeiro"
-    elif(pedirNumero() == 2):
+    elif(c == 2):
         return "Fevereiro"
-    elif(pedirNumero() == 3):
+    elif(c == 3):
         return "Março" 
-    elif(pedirNumero() == 4):
+    elif(c == 4):
         return "Abril"
-    elif(pedirNumero() == 5):
+    elif(c == 5):
         return "Maio"
-    elif(pedirNumero() == 6):
+    elif(c == 6):
         return "Junho"
-    elif(pedirNumero() == 7):
+    elif(c == 7):
         return "Julho"
-    elif(pedirNumero() == 8):
+    elif(c == 8):
         return "Agosto"
-    elif(pedirNumero() == 9):
+    elif(c == 9):
         return "Setembro"
-    elif(pedirNumero() == 10):
+    elif(c == 10):
         return "Outubro"
-    elif(pedirNumero() == 11):
+    elif(c == 11):
         return ("novembro")
-    elif(pedirNumero() == 12):
+    elif(c == 12):
         return "Dezembro"
     else:
         return"Mês Invalido"
 
-def calcularQuadrado():
-    quad = numeroAle() ** 2
+#4
+def calcularQuadrado(d):
+    quad = d ** 2
+    return quad
+def calcularRetangulo(e,f):
+    retangulo = e * f
+    return retangulo
+def calcularTriangulo(g, h):
+    tri = (g * h)/2
+    return tri
+def calcularTrapezio(i, j):
+    tra = ((i + i)*j)/2
+    return tra
 
-def calcularRetangulo():
-    print()
-
-def calcularTriangulo():
-    print()
-
-def calcularTrapezio():
-    print()
+#5
+def fatorial(n):
+    fat = 1
+    i = 2
+    while( i <= n):
+        fat = fat*i
+        i+=1
+    return fat
+    
+#6
