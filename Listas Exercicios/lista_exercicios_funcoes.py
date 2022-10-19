@@ -1,3 +1,4 @@
+from itertools import count
 import random
 #1 - Crie uma função para pedir um número inteiro ao usuário e retornar ele. Toda vez que você precisar de um número informado pelo usuário, utilize ela. Ela não tem parâmetro e o retorno é o valor digitado pelo usuário já com o tipo inteiro.
 def NumeroInteiro():
@@ -62,9 +63,16 @@ def trapezio(B, b, h):
 
 #5 - Faça um programa para calcular o Fatorial de um número. Para o cálculo do fatorial, sabemos que n! depende de (n-1)!; este por sua vez depende de (n-2)!; e, assim por diante, até que n seja 1, quando então tem-se que fatorial de 1 é igual a 1 mesmo. Utilize uma função que recebe como parâmetro de entrada o número a ser calculado o fatorial, do tipo inteiro, e retorna o fatorial deste número, também do tipo inteiro
 def fatorial(x):
-    cont = 2
+    cont = 1
     fat = 1
-    while(cont <= x):
+    while(x > cont):
         fat *= cont
-        cont+=1
+        cont-=1
     return fat
+
+#6 - Crie uma função para calcular o fatorial, mas não utilize laço de repetição.
+def fatNoRepeat(n):
+    if (n == 1 or n == 0):
+        return (1)
+    else:
+        return (n * fatNoRepeat(n-1))
