@@ -76,3 +76,52 @@ def fatNoRepeat(n):
         return (1)
     else:
         return (n * fatNoRepeat(n-1))
+
+#7 - Faça uma função que receba um vetor como parâmetro e retorne apenas o maior valor deste vetor.
+def maior(m):
+
+    maior = m[0]
+    for i in range(1, len(m)):
+        if(m[i] > maior):
+            maior = m[i]
+
+        return maior
+
+#8 - Faça uma função que receba um vetor como parâmetro e retorne apenas o menor valor deste vetor.
+def menorValor(mv):
+
+    menor = mv[0]
+    for i in range(1, len(mv)):
+        if(mv[i] < menor):
+            menor = mv[i]
+
+        return menor
+
+#9 - Faça uma função para receber um vetor como parâmetro, calcular a soma desse vetor e retornar apenas a média dos valores.
+
+def media(md):
+
+    soma = 0
+    for i in range(1, len(md)):
+        soma += md[i]
+
+    return soma/len(md)
+
+#10 - Faça uma função que recebe um vetor de números inteiros como parâmetro. Esta função deve calcular o dobro de cada valor do vetor e retornar um vetor inteiro atualizado com o dobro de cada número. Dica: crie outro vetor dentro da função com o mesmo tamanho para preencher com o dobro. 
+def calDobro(vet):
+    vet2 = [0] * len(vet)
+    for i in range(0,len(vet)):
+        vet2[i] = vet[i] * 2
+
+    return vet2
+
+#11 - Construa uma função que receba uma data no formato DD/MM/AAAA e devolva uma string no formato DD de Mês Por Extenso de AAAA. Para pegar o mês por extenso, utilize a função criada no exercício 3. Por exemplo: 18/09/2019 retorna 18 de Setembro de 2019.
+
+def recebeData(data):
+
+    data = list(data)
+    datadi = data[0] + data[1]
+    datames = data[3] + data[4]
+    dataAno = data[6] + data[7] + data[8] + data[9]
+
+    return datadi + datames + dataAno
