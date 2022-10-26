@@ -1,8 +1,6 @@
 
-#Exercício 01: Um telefone celular precisa ser representado em um programa de computador. Sabe-se que este telefone possui uma marca, um modelo, um ano de fabricação e um preço. Implemente uma estrutura para representar os telefones celulares. Crie três celulares, solicite os dados ao usuário para cada um e apresenteos na tela.
-from mimetypes import init
 import time
-from tokenize import Double
+#Exercício 01: Um telefone celular precisa ser representado em um programa de computador. Sabe-se que este telefone possui uma marca, um modelo, um ano de fabricação e um preço. Implemente uma estrutura para representar os telefones celulares. Crie três celulares, solicite os dados ao usuário para cada um e apresenteos na tela.
 
 #Criando a classe com seus campos e atributos
 class telefone:
@@ -54,4 +52,29 @@ for i in range(0, len(porta)):
 for i in range(0, len(vetor_Porta)):
     print(f"Comodo: {vetor_Porta[i].porta_comodo}, Largura: {vetor_Porta[i].largura}, Altura: {vetor_Porta[i].altura}, Peso: {vetor_Porta[i].peso}, Material: { vetor_Porta[i].material} \n")
 
+#Exercício 03: Escreva um modelo para representar uma lâmpada que está à venda em um supermercado. Que atributos devem ser representados por este modelo?
+class lampada:
+    def __init__(self):
+        self.marca = ""
+        self.modelo = ""
+        self.potencia = ""
+        self.tipo_soquete = ""
+        self.cor_luz = ""
+        self.voltagem = ""
 
+tam = int(input("Informe a quantidade de lampadas que será cadastradas: "))
+vetor_lampada = [lampada()] * tam
+
+for i in range(0, len(vetor_lampada)):
+    vetor_lampada[i] = lampada()
+    vetor_lampada[i].marca = input("Informe a MARCA da lampada: ")
+    vetor_lampada[i].modelo = input("Informe o MODELO da lampada {}: ".format(vetor_lampada[i].marca))
+    vetor_lampada[i].potencia = input("Informe a POTÊNCIA do  modelo {}: ".format(vetor_lampada[i].modelo))
+    vetor_lampada[i].tipo_soquete = input("Informe o tipo do soquete: ")
+    vetor_lampada[i].cor_luz = input("Cor da luz do modelo {}: ".format(vetor_lampada[i].modelo))
+    vetor_lampada[i].voltagem = input("Voltagem do modelo {}: ".format(vetor_lampada[i].modelo))
+    time.sleep(0.10)
+    print(" ")
+
+for i in range(0, len(vetor_lampada)):
+    print("Marca: {}, Modelo: {}, Potência: {}, Tipo Soquete: {}, Cor Luz: {}, Voltagem: {}".format(vetor_lampada[i].marca, vetor_lampada[i].modelo, vetor_lampada[i].potencia, vetor_lampada[i].tipo_soquete, vetor_lampada[i].cor_luz, vetor_lampada[i].voltagem))
