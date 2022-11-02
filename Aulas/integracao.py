@@ -9,18 +9,28 @@ print("Conexão estabelecida!")
     
 
 #Executa uma consulta precisamos de um "ponteiro" para o banco
+
 cursor = banco.cursor()
+for i in range(1, 3+1):
 
-#Inserindo valores no banco
-sql = "INSERT INTO disciplinas (nome, ch, professor) VALUES (%s,%s,%s)"
-valor1 = ("Algoritmos", "160", "Rafael")
-valor2 = ("Portugues", "250", "Ana Carolina")
-valor3 = ("Engenharia de software", "500", "André")
+    #Inserindo valores no banco
+    sql = "INSERT INTO disciplinas (nome, ch, professor) VALUES (%s,%s,%s)"
 
-#execulta consulta
-cursor.execute(sql, valor1)
-cursor.execute(sql, valor2)
-cursor.execute(sql, valor3)
+    #pedindo valores
+    nome = input("Informe o nome da Disciplina: ")
+    ch = int(input("Informe a quantidade de horas da disciplina: "))
+    professor = input("Informe o professor: ")
+
+    #valores
+    valor = (nome, ch, professor)
+
+    #execulta consulta
+    cursor.execute(sql, valor)
+
+resultado = cursor.fetchall()
+
+for i in range(0, len(resultado)):
+    print(resultado[i])
 
 #salva a consulta feita no banco de dados
 banco.commit()
